@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		window.onload=function(){
+			var oUl=document.getElementById('list');
+
+			//通过循环创建10个li
+			for(var i=0;i<10;i++){
+				var oLi=document.createElement('li');
+				//将li放到oUl里面
+				oUl.appendChild(oLi);
+				//通过判断奇数行还是偶数行，给li加背景色，实现隔行换色
+				if(i%2==1){
+					oLi.style.background='red';
+				}else{
+					oLi.style.background='blue';
+				}
+			}
+		}
+	</script>
+</head>
+<body>
+	<ul id="list">
+		<!-- <li style="background: red;"></li>
+		<li style="background: blue;"></li> -->
+	</ul>
+</body>
+</html>
